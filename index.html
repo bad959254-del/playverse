@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="PlayVerse — enjoy free online mini games on your phone or computer.">
+  <title>PlayVerse - Free Online Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">🎮 Play<span>Verse</span></a>
+    <span class="free-label">100% FREE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT LEVEL STARTS HERE</p>
+      <h1>Play More. <span>Have Fun.</span></h1>
+      <p class="hero-text">
+        Discover fun mini games. No downloads. Just play!
+      </p>
+      <a href="#games" class="primary-btn">Explore Games ↓</a>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">GAME ZONE</p>
+          <h2>Choose Your Game</h2>
+        </div>
+        <span id="gameCount">30 Games</span>
+      </div>
+
+      <input
+        type="search"
+        id="gameSearch"
+        placeholder="🔎 Search games..."
+        aria-label="Search games"
+      >
+
+      <nav class="filters" aria-label="Filter games">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="arcade">Arcade</button>
+        <button class="filter-btn" data-category="puzzle">Puzzle</button>
+        <button class="filter-btn" data-category="classic">Classic</button>
+        <button class="filter-btn" data-category="action">Action</button>
+        <button class="filter-btn" data-category="brain">Brain</button>
+      </nav>
+
+      <div class="game-grid" id="gameGrid">
+        <button class="game-card" data-game="snake" data-category="arcade">
+          <span class="game-icon">🐍</span><span class="game-name">Neon Snake</span><span class="game-desc">Eat, grow and survive</span>
+        </button>
+        <button class="game-card" data-game="memory" data-category="brain">
+          <span class="game-icon">🧠</span><span class="game-name">Memory Match</span><span class="game-desc">Match the hidden pairs</span>
+        </button>
+        <button class="game-card" data-game="ttt" data-category="classic">
+          <span class="game-icon">❎</span><span class="game-name">Tic-Tac-Toe</span><span class="game-desc">Challenge a friend</span>
+        </button>
+        <button class="game-card" data-game="rps" data-category="classic">
+          <span class="game-icon">✊</span><span class="game-name">Rock Paper Scissors</span><span class="game-desc">Beat the computer</span>
+        </button>
+        <button class="game-card" data-game="whack" data-category="arcade">
+          <span class="game-icon">🎯</span><span class="game-name">Target Smash</span><span class="game-desc">Hit targets for points</span>
+        </button>
+        <button class="game-card" data-game="2048" data-category="puzzle">
+          <span class="game-icon">🔢</span><span class="game-name">2048 Puzzle</span><span class="game-desc">Combine matching tiles</span>
+        </button>
+        <button class="game-card" data-game="sudoku" data-category="brain">
+          <span class="game-icon">🔲</span><span class="game-name">Sudoku</span><span class="game-desc">Solve the number grid</span>
+        </button>
+        <button class="game-card" data-game="brick" data-category="arcade">
+          <span class="game-icon">🧱</span><span class="game-name">Brick Breaker</span><span class="game-desc">Break every brick</span>
+        </button>
+        <button class="game-card" data-game="mines" data-category="puzzle">
+          <span class="game-icon">💣</span><span class="game-name">Minesweeper</span><span class="game-desc">Avoid hidden mines</span>
+        </button>
+        <button class="game-card" data-game="hangman" data-category="brain">
+          <span class="game-icon">🔤</span><span class="game-name">Hangman</span><span class="game-desc">Guess the secret word</span>
+        </button>
+        <button class="game-card" data-game="sequence" data-category="brain">
+          <span class="game-icon">🎨</span><span class="game-name">Color Sequence</span><span class="game-desc">Remember the pattern</span>
+        </button>
+        <button class="game-card" data-game="racer" data-category="action">
+          <span class="game-icon">🏎️</span><span class="game-name">Mini Racer</span><span class="game-desc">Dodge traffic</span>
+        </button>
+        <button class="game-card" data-game="pong" data-category="classic">
+          <span class="game-icon">🏓</span><span class="game-name">Pong</span><span class="game-desc">Keep the ball in play</span>
+        </button>
+        <button class="game-card" data-game="scramble" data-category="brain">
+          <span class="game-icon">🔠</span><span class="game-name">Word Scramble</span><span class="game-desc">Unscramble the letters</span>
+        </button>
+        <button class="game-card" data-game="math" data-category="brain">
+          <span class="game-icon">➗</span><span class="game-name">Math Sprint</span><span class="game-desc">Solve before time runs out</span>
+        </button>
+        <button class="game-card" data-game="bird" data-category="arcade">
+          <span class="game-icon">🐦</span><span class="game-name">Flying Bird</span><span class="game-desc">Fly between obstacles</span>
+        </button>
+        <button class="game-card" data-game="connect4" data-category="classic">
+          <span class="game-icon">🔴</span><span class="game-name">Connect Four</span><span class="game-desc">Connect four in a row</span>
+        </button>
+        <button class="game-card" data-game="checkers" data-category="classic">
+          <span class="game-icon">⚫</span><span class="game-name">Checkers</span><span class="game-desc">Plan your next move</span>
+        </button>
+        <button class="game-card" data-game="battleship" data-category="strategy">
+          <span class="game-icon">🚢</span><span class="game-name">Battleship</span><span class="game-desc">Find the hidden ships</span>
+        </button>
+        <button class="game-card" data-game="maze" data-category="puzzle">
+          <span class="game-icon">🌀</span><span class="game-name">Maze Runner</span><span class="game-desc">Find your way out</span>
+        </button>
+        <button class="game-card" data-game="typing" data-category="brain">
+          <span class="game-icon">⌨️</span><span class="game-name">Typing Challenge</span><span class="game-desc">Test your typing speed</span>
+        </button>
+        <button class="game-card" data-game="space" data-category="action">
+          <span class="game-icon">🚀</span><span class="game-name">Space Shooter</span><span class="game-desc">Defend your spaceship</span>
+        </button>
+        <button class="game-card" data-game="guess" data-category="classic">
+          <span class="game-icon">❓</span><span class="game-name">Guess the Number</span><span class="game-desc">Find the secret number</span>
+        </button>
+        <button class="game-card" data-game="mole" data-category="arcade">
+          <span class="game-icon">🐹</span><span class="game-name">Whack-a-Mole</span><span class="game-desc">Tap the mole quickly</span>
+        </button>
+        <button class="game-card" data-game="dice" data-category="classic">
+          <span class="game-icon">🎲</span><span class="game-name">Dice Duel</span><span class="game-desc">Roll against the computer</span>
+        </button>
+        <button class="game-card" data-game="coins" data-category="arcade">
+          <span class="game-icon">🪙</span><span class="game-name">Coin Catcher</span><span class="game-desc">Catch falling coins</span>
+        </button>
+        <button class="game-card" data-game="simon" data-category="brain">
+          <span class="game-icon">🟢</span><span class="game-name">Simon Says</span><span class="game-desc">Repeat the light pattern</span>
+        </button>
+        <button class="game-card" data-game="reaction" data-category="arcade">
+          <span class="game-icon">⚡</span><span class="game-name">Reaction Test</span><span class="game-desc">Test your reflexes</span>
+        </button>
+        <button class="game-card" data-game="dodge" data-category="action">
+          <span class="game-icon">💨</span><span class="game-name">Rock Dodge</span><span class="game-desc">Avoid incoming rocks</span>
+        </button>
+        <button class="game-card" data-game="pattern" data-category="puzzle">
+          <span class="game-icon">🧩</span><span class="game-name">Pattern Puzzle</span><span class="game-desc">Discover what comes next</span>
+        </button>
+      </div>
+
+      <p id="noResults" hidden>No games found. Try another search.</p>
+    </section>
+
+    <section class="play-section" id="playArea" hidden>
+      <div class="play-heading">
+        <h2 id="gameTitle">Game</h2>
+        <button id="closeGame" type="button">✕ Close</button>
+      </div>
+      <div id="gameStage">
+        <p>Select a game to start playing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">🎮 Play<span>Verse</span></a>
+    <p>Free games. Good vibes. Play anywhere.</p>
+    <p>© <span id="year">2026</span> PlayVerse</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
