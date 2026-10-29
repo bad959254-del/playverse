@@ -55,6 +55,20 @@ function btn(text, action) {
 }
 
 function startGame(id) {
+  const pages = {
+  guess: "guess.html",
+  rps: "rock-paper-scissors.html",
+  ttt: "tic-tac-toe.html",
+  memory: "memory.html",
+  dice: "dice.html",
+  reaction: "reaction.html",
+  math: "math.html"
+};
+
+if (pages[id]) {
+  window.location.href = "games/" + pages[id];
+  return;
+}
   cleanup();
   cleanup = () => {};
   const card = cards.find(c => c.dataset.game === id);
