@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guess the Number | PlayVerse</title>
+  <style>
+    body {
+      background: #10111b;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 25px 15px;
+    }
+    main {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #1b1c2b;
+      border: 1px solid #44415e;
+      border-radius: 20px;
+    }
+    input, button {
+      padding: 13px;
+      margin: 8px 4px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    button {
+      background: #f5c451;
+      border: none;
+      font-weight: bold;
+    }
+    a { color: #f5c451; }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>🎮 PLAYVERSE</h2>
+    <h1>Guess the Number</h1>
+    <p>Guess a number between 1 and 100.</p>
+    <input id="guess" type="number" min="1" max="100"
+      placeholder="Enter your guess">
+    <button id="check">Check</button>
+    <p id="result">Good luck!</p>
+    <button id="restart">Restart</button>
+    <p><a href="../index.html">← Back to home</a></p>
+  </main>
+  <script>
+    let answer;
+
+    function reset() {
+      answer = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("guess").value = "";
+      document.getElementById("result").textContent = "Good luck!";
+    }
+
+    document.getElementById("check").onclick = () => {
+      const value = Number(document.getElementById("guess").value);
+      const result = document.getElementById("result");
+
+      if (!value || value < 1 || value > 100) {
+        result.textContent = "Enter a number from 1 to 100.";
+      } else if (value === answer) {
+        result.textContent = "🎉 Correct! You won!";
+      } else {
+        result.textContent = value < answer
+          ? "Too low! Try again."
+          : "Too high! Try again.";
+      }
+    };
+
+    document.getElementById("restart").onclick = reset;
+    reset();
+  </script>
+</body>
+</html>
